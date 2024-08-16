@@ -47,19 +47,26 @@ function displayMenuItems(menu) {
     });
      
     menuContainer.appendChild(itemsList);
-    
+
   }      
 }
 
 // Callback function for adding an item to the order
 function addToOrder(itemName) {
     // Get the order items list and the order total element from the HTML
+    const orderItems = document.getElementById('order-items');
+    const orderTotalElement = document.getElementById('order-total');
+
 
     // Create a list item for the order
-
     // Set the text content of the list item to the item name
 
+    const orderItem = document.createElement('li');
+    orderItem.textContent = itemName;
+
     // Append the list item to the order items list
+
+    orderItems.appendChild(orderItem);
 
     // Calculate and update the total price
 

@@ -10,16 +10,21 @@ function displayMenuItems(menu) {
     // Get the menu container element from the HTML
     const menuContainer = document.getElementById('menu');
     if (!menuContainer) {
-        console.error('Menu Container Not Found')
+        console.error('Menu Container Not Found');
+        return;
     }
-    
+
+
     // Loop through each category and its items in the menu object
+    for (const category in menu) {
 
         // Create an element to represent the category
-
         // Set the text content of the category element to the category name
-
         // Append the category element to the menu container
+
+    const categoryElement = document.createElement('h3');
+    categoryElement.textContent = category;
+    menuContainer.appendChild(categoryElement);
 
         // Create an element to represent a list of items
 

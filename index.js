@@ -69,13 +69,18 @@ function addToOrder(itemName) {
     orderItems.appendChild(orderItem);
 
     // Calculate and update the total price
+    const price = 30.00;
+    const currentTotal = parseFloat(orderTotalElement.textContent);
+    const newTotal = currentTotal + price;
 
     // Update the text content of the order total element with the new total
+    orderTotalElement.textContent = newTotal.toFixed(2);
 }
 
 // Function to initialize the menu system
 function initMenuSystem(menu) {
     // Call the function to display menu items
+    displayMenuItems(menu);
 }
 
 // Start the menu system by calling the init function
